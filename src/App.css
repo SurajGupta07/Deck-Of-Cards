@@ -1,0 +1,77 @@
+.cards {
+    height: 300px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 5px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    position: relative;
+    margin-left: -160px;
+}
+
+.top-item {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.bottom-item {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.center-img {
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 3rem 0 12rem;
+}
+
+.items--container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.item--btn {
+    cursor: pointer;
+    border: 1px solid black;
+    background: #ffca02;
+    border-radius: 2px;
+    padding: 7px 14px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.item--btn:hover {
+    background-color: #f0bd08;
+    color: black;
+    border: 2px solid #ffca02;
+    border-radius: 4px;
+}
+
+.selectedCards--container {
+    margin: 1rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.status {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffeeee;
+}

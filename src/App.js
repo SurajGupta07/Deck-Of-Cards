@@ -1,11 +1,13 @@
-import './App.css';
+import "./App.css";
+import { AllCards } from "./components/AllCards";
 
 function App() {
-  return (
-    <div>
-      Cards Deck UI Problem
-    </div>
-  );
+    return (
+        <>
+            <h1 style={{textAlign: 'center', color: 'white'}}>Cards UI</h1>
+            <AllCards />
+        </>
+    );
 }
 
 export default App;
