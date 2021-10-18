@@ -3,8 +3,7 @@ import { Card } from "./Card";
 import { useCardActions } from "../hooks/useCardActions";
 export const AllCards = () => {
     const { cardsData, status, pickedCards } = useCard();
-    console.log(pickedCards)
-    const {drawCards} = useCardActions();
+    const {drawCards, shuffleDeck} = useCardActions();
     return (
         <div>
             <div className="cards-container">
@@ -13,7 +12,7 @@ export const AllCards = () => {
                     cardsData.map((card) => <Card {...card} />)}
             </div>
             <div className="items--container">
-                <button className="item--btn">Shuffle</button>
+                <button className="item--btn" onClick={shuffleDeck}>Shuffle</button>
                 <button className="item--btn" onClick={() => drawCards(5)}>Draw Cards</button>
             </div>
             {status && <div className="status">{status}</div>}

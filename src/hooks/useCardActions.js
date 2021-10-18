@@ -25,7 +25,7 @@ export const useCardActions = () => {
     };
 
     const drawCards = (cardsLeft) => {
-        setPickedCards([])
+        setPickedCards([]);
         if (cardsData.length < cardsLeft) {
             setStatus("No more picks left");
             return;
@@ -49,8 +49,19 @@ export const useCardActions = () => {
         setCardsData(leftOutCards);
     };
 
+    const shuffleDeck = () => {
+        let shuffledNewDeck = cardsData
+            .map((value) => ({ value, sort: Math.random() }))
+            .sort((one, two) => one.sort - two.sort)
+            .map(({ value }) => value);
+        setCardsData(shuffledNewDeck);
+        setPickedCards(null);
+        setStatus("");
+    };
+
     return {
         imageURL,
         drawCards,
+        shuffleDeck,
     };
 };
