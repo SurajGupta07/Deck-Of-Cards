@@ -1,4 +1,4 @@
-# Farm-Easy
+# Deck-of-cards
 An Cards App built with React⚛
 
 Deployed App: [https://cards-deck.netlify.app/](https://cards-deck.netlify.app/)    
